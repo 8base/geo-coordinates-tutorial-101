@@ -1,0 +1,644 @@
+{
+  "tables": [
+    {
+      "id": "5f5a6c85197ad8000790b284",
+      "name": "Restaurants",
+      "displayName": "Restaurants",
+      "isSystem": false,
+      "fields": [
+        {
+          "id": "5f5a6c85197ad8000790b28e",
+          "name": "id",
+          "displayName": "ID",
+          "description": null,
+          "fieldType": "ID",
+          "fieldTypeAttributes": null,
+          "isList": false,
+          "isRequired": true,
+          "isUnique": true,
+          "defaultValue": null,
+          "isSystem": true,
+          "isMeta": true,
+          "relation": null
+        },
+        {
+          "id": "5f5a6c85197ad8000790b28c",
+          "name": "createdAt",
+          "displayName": "Created At",
+          "description": null,
+          "fieldType": "DATE",
+          "fieldTypeAttributes": {
+            "format": "DATETIME"
+          },
+          "isList": false,
+          "isRequired": false,
+          "isUnique": false,
+          "defaultValue": null,
+          "isSystem": true,
+          "isMeta": true,
+          "relation": null
+        },
+        {
+          "id": "5f5a6c85197ad8000790b28a",
+          "name": "updatedAt",
+          "displayName": "Updated At",
+          "description": null,
+          "fieldType": "DATE",
+          "fieldTypeAttributes": {
+            "format": "DATETIME"
+          },
+          "isList": false,
+          "isRequired": false,
+          "isUnique": false,
+          "defaultValue": null,
+          "isSystem": true,
+          "isMeta": true,
+          "relation": null
+        },
+        {
+          "id": "5f5a6c85197ad8000790b286",
+          "name": "createdBy",
+          "displayName": "Created By",
+          "description": null,
+          "fieldType": "RELATION",
+          "fieldTypeAttributes": null,
+          "isList": false,
+          "isRequired": false,
+          "isUnique": false,
+          "defaultValue": null,
+          "isSystem": true,
+          "isMeta": true,
+          "relation": {
+            "refFieldName": null,
+            "refFieldDisplayName": null,
+            "relationTableName": null,
+            "relationFieldName": "createdById",
+            "refTable": {
+              "id": "5f10989d73ed2000071c8ec2",
+              "name": "Users"
+            },
+            "refFieldIsList": null,
+            "refFieldIsRequired": null
+          }
+        },
+        {
+          "id": "5f5a6c9336ab400007f22c99",
+          "name": "name",
+          "displayName": "name",
+          "description": null,
+          "fieldType": "TEXT",
+          "fieldTypeAttributes": {
+            "format": "UNFORMATTED",
+            "fieldSize": 100
+          },
+          "isList": false,
+          "isRequired": false,
+          "isUnique": false,
+          "defaultValue": null,
+          "isSystem": false,
+          "isMeta": false,
+          "relation": null
+        },
+        {
+          "id": "5f5fcf4614332c0008f0c578",
+          "name": "location",
+          "displayName": "location",
+          "description": null,
+          "fieldType": "GEO",
+          "fieldTypeAttributes": {
+            "format": "POINT"
+          },
+          "isList": false,
+          "isRequired": true,
+          "isUnique": false,
+          "defaultValue": null,
+          "isSystem": false,
+          "isMeta": false,
+          "relation": null
+        },
+        {
+          "id": "5f5fcfb70439cc000702a634",
+          "name": "reviews",
+          "displayName": "Reviews",
+          "description": null,
+          "fieldType": "RELATION",
+          "fieldTypeAttributes": null,
+          "isList": true,
+          "isRequired": false,
+          "isUnique": null,
+          "defaultValue": null,
+          "isSystem": false,
+          "isMeta": false,
+          "relation": {
+            "refFieldName": "restaurant",
+            "refFieldDisplayName": "Restaurant",
+            "relationTableName": "RestaurantsReview",
+            "relationFieldName": "restaurantAId",
+            "refTable": {
+              "id": "5f5fcf1d146e5d0008921946",
+              "name": "Reviews"
+            },
+            "refFieldIsList": false,
+            "refFieldIsRequired": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "5f5fcf1d146e5d0008921946",
+      "name": "Reviews",
+      "displayName": "Reviews",
+      "isSystem": false,
+      "fields": [
+        {
+          "id": "5f5fcf1d146e5d0008921950",
+          "name": "id",
+          "displayName": "ID",
+          "description": null,
+          "fieldType": "ID",
+          "fieldTypeAttributes": null,
+          "isList": false,
+          "isRequired": true,
+          "isUnique": true,
+          "defaultValue": null,
+          "isSystem": true,
+          "isMeta": true,
+          "relation": null
+        },
+        {
+          "id": "5f5fcf1d146e5d000892194e",
+          "name": "createdAt",
+          "displayName": "Created At",
+          "description": null,
+          "fieldType": "DATE",
+          "fieldTypeAttributes": {
+            "format": "DATETIME"
+          },
+          "isList": false,
+          "isRequired": false,
+          "isUnique": false,
+          "defaultValue": null,
+          "isSystem": true,
+          "isMeta": true,
+          "relation": null
+        },
+        {
+          "id": "5f5fcf1d146e5d000892194c",
+          "name": "updatedAt",
+          "displayName": "Updated At",
+          "description": null,
+          "fieldType": "DATE",
+          "fieldTypeAttributes": {
+            "format": "DATETIME"
+          },
+          "isList": false,
+          "isRequired": false,
+          "isUnique": false,
+          "defaultValue": null,
+          "isSystem": true,
+          "isMeta": true,
+          "relation": null
+        },
+        {
+          "id": "5f5fcf1d146e5d0008921948",
+          "name": "createdBy",
+          "displayName": "Created By",
+          "description": null,
+          "fieldType": "RELATION",
+          "fieldTypeAttributes": null,
+          "isList": false,
+          "isRequired": false,
+          "isUnique": false,
+          "defaultValue": null,
+          "isSystem": true,
+          "isMeta": true,
+          "relation": {
+            "refFieldName": null,
+            "refFieldDisplayName": null,
+            "relationTableName": null,
+            "relationFieldName": "createdById",
+            "refTable": {
+              "id": "5f10989d73ed2000071c8ec2",
+              "name": "Users"
+            },
+            "refFieldIsList": null,
+            "refFieldIsRequired": null
+          }
+        },
+        {
+          "id": "5f5fd3c44e24dc0008bc977c",
+          "name": "content",
+          "displayName": "content",
+          "description": null,
+          "fieldType": "TEXT",
+          "fieldTypeAttributes": {
+            "format": "UNFORMATTED",
+            "fieldSize": 100
+          },
+          "isList": false,
+          "isRequired": false,
+          "isUnique": false,
+          "defaultValue": null,
+          "isSystem": false,
+          "isMeta": false,
+          "relation": null
+        },
+        {
+          "id": "5f5fd3f13dc4ea00072c4a84",
+          "name": "rating",
+          "displayName": "rating",
+          "description": null,
+          "fieldType": "NUMBER",
+          "fieldTypeAttributes": {
+            "format": "NUMBER",
+            "precision": 1,
+            "currency": null,
+            "minValue": null,
+            "maxValue": null,
+            "isBigInt": null
+          },
+          "isList": false,
+          "isRequired": true,
+          "isUnique": false,
+          "defaultValue": "5",
+          "isSystem": false,
+          "isMeta": false,
+          "relation": null
+        },
+        {
+          "id": "5f5fcfb70439cc000702a637",
+          "name": "restaurant",
+          "displayName": "Restaurant",
+          "description": null,
+          "fieldType": "RELATION",
+          "fieldTypeAttributes": null,
+          "isList": false,
+          "isRequired": false,
+          "isUnique": null,
+          "defaultValue": null,
+          "isSystem": false,
+          "isMeta": false,
+          "relation": {
+            "refFieldName": "reviews",
+            "refFieldDisplayName": "Reviews",
+            "relationTableName": "RestaurantsReview",
+            "relationFieldName": "reviewBId",
+            "refTable": {
+              "id": "5f5a6c85197ad8000790b284",
+              "name": "Restaurants"
+            },
+            "refFieldIsList": true,
+            "refFieldIsRequired": false
+          }
+        }
+      ]
+    }
+  ],
+  "data": {
+    "Restaurants": [
+      {
+        "$id": "restaurant-1",
+        "name": "Island Burger",
+        "location": [40.6345, -73.94766]
+      },
+      {
+        "$id": "restaurant-2",
+        "name": "Vietnaam",
+        "location": [40.7791481018066, -73.9504165649414]
+      },
+      {
+        "$id": "restaurant-3",
+        "name": "The Burrito Box",
+        "location": [40.76831, -73.98565]
+      },
+      {
+        "$id": "restaurant-4",
+        "name": "Chick'nCone",
+        "location": [40.767567, -73.982461]
+      },
+      {
+        "$id": "restaurant-5",
+        "name": "Jollibee",
+        "location": [40.7458941, -73.901773]
+      },
+      {
+        "$id": "restaurant-6",
+        "name": "New World Mall Food Court",
+        "location": [40.7593304514751, -73.8291516155005]
+      },
+      {
+        "$id": "restaurant-7",
+        "name": "Shu Jiao Fu Zhou Cuisine Restaurant",
+        "location": [40.7184290357839, -73.9916928979573]
+      },
+      {
+        "$id": "restaurant-8",
+        "name": "Canal Street Market",
+        "location": [40.71897, -74.00102]
+      },
+      {
+        "$id": "restaurant-9",
+        "name": "Thursday Kitchen",
+        "location": [40.7275, -73.9838]
+      },
+      {
+        "$id": "restaurant-10",
+        "name": "Gotham West Market",
+        "location": [40.7624395, -73.9971462]
+      },
+      {
+        "$id": "restaurant-11",
+        "name": "Take31",
+        "location": [40.7463, -73.984809]
+      },
+      {
+        "$id": "restaurant-12",
+        "name": "Po'Mi",
+        "location": [40.68705, -73.94424]
+      },
+      {
+        "$id": "restaurant-20",
+        "name": "NAYA",
+        "location": [40.7021301747589, -74.0118362768599]
+      },
+      {
+        "$id": "restaurant-13",
+        "name": "Jollibee",
+        "location": [40.75576, -73.99109]
+      },
+      {
+        "$id": "restaurant-14",
+        "name": "Alegria",
+        "location": [40.70213183, -73.92368033]
+      },
+      {
+        "$id": "restaurant-15",
+        "name": "A&A Bake and Double and Roti Shop",
+        "location": [40.68043, -73.94795]
+      },
+      {
+        "$id": "restaurant-16",
+        "name": "The Hi Hi Room 2.0 2.0",
+        "location": [40.6871, -73.99036]
+      },
+      {
+        "$id": "restaurant-17",
+        "name": "Tacoway Beach",
+        "location": [40.58884, -73.81211]
+      },
+      {
+        "$id": "restaurant-18",
+        "name": "Cuchifritos",
+        "location": [40.79804, -73.941]
+      },
+      {
+        "$id": "restaurant-19",
+        "name": "The Alcove",
+        "location": [40.7459065, -73.915103]
+      }
+    ],
+    "Reviews": [
+      {
+        "$id": "review-1",
+        "content": "I liked it!",
+        "rating": 3.5,
+        "restaurant": { "$id": "restaurant-1" }
+      },
+      {
+        "$id": "review-2",
+        "content": "It was okay.",
+        "rating": 3.5,
+        "restaurant": { "$id": "restaurant-1" }
+      },
+      {
+        "$id": "review-3",
+        "content": "I liked it!",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-2" }
+      },
+      {
+        "$id": "review-4",
+        "content": "It was okay.",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-2" }
+      },
+      {
+        "$id": "review-5",
+        "content": "I liked it!",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-3" }
+      },
+      {
+        "$id": "review-6",
+        "content": "It was okay.",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-3" }
+      },
+      {
+        "$id": "review-7",
+        "content": "I liked it!",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-4" }
+      },
+      {
+        "$id": "review-8",
+        "content": "It was okay.",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-4" }
+      },
+      {
+        "$id": "review-9",
+        "content": "I liked it!",
+        "rating": 3.5,
+        "restaurant": { "$id": "restaurant-5" }
+      },
+      {
+        "$id": "review-10",
+        "content": "It was okay.",
+        "rating": 3.5,
+        "restaurant": { "$id": "restaurant-5" }
+      },
+      {
+        "$id": "review-11",
+        "content": "I liked it!",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-6" }
+      },
+      {
+        "$id": "review-12",
+        "content": "It was okay.",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-6" }
+      },
+      {
+        "$id": "review-13",
+        "content": "I liked it!",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-7" }
+      },
+      {
+        "$id": "review-14",
+        "content": "It was okay.",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-7" }
+      },
+      {
+        "$id": "review-15",
+        "content": "I liked it!",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-8" }
+      },
+      {
+        "$id": "review-16",
+        "content": "It was okay.",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-8" }
+      },
+      {
+        "$id": "review-17",
+        "content": "I liked it!",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-9" }
+      },
+      {
+        "$id": "review-18",
+        "content": "It was okay.",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-9" }
+      },
+      {
+        "$id": "review-19",
+        "content": "I liked it!",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-10" }
+      },
+      {
+        "$id": "review-20",
+        "content": "It was okay.",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-10" }
+      },
+      {
+        "$id": "review-21",
+        "content": "I liked it!",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-11" }
+      },
+      {
+        "$id": "review-22",
+        "content": "It was okay.",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-11" }
+      },
+      {
+        "$id": "review-23",
+        "content": "I liked it!",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-12" }
+      },
+      {
+        "$id": "review-24",
+        "content": "It was okay.",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-12" }
+      },
+      {
+        "$id": "review-25",
+        "content": "I liked it!",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-13" }
+      },
+      {
+        "$id": "review-26",
+        "content": "It was okay.",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-13" }
+      },
+      {
+        "$id": "review-27",
+        "content": "I liked it!",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-14" }
+      },
+      {
+        "$id": "review-28",
+        "content": "It was okay.",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-14" }
+      },
+      {
+        "$id": "review-29",
+        "content": "I liked it!",
+        "rating": 5,
+        "restaurant": { "$id": "restaurant-15" }
+      },
+      {
+        "$id": "review-30",
+        "content": "It was okay.",
+        "rating": 5,
+        "restaurant": { "$id": "restaurant-15" }
+      },
+      {
+        "$id": "review-31",
+        "content": "I liked it!",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-16" }
+      },
+      {
+        "$id": "review-32",
+        "content": "It was okay.",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-16" }
+      },
+      {
+        "$id": "review-33",
+        "content": "I liked it!",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-17" }
+      },
+      {
+        "$id": "review-34",
+        "content": "It was okay.",
+        "rating": 4.5,
+        "restaurant": { "$id": "restaurant-17" }
+      },
+      {
+        "$id": "review-35",
+        "content": "I liked it!",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-18" }
+      },
+      {
+        "$id": "review-36",
+        "content": "It was okay.",
+        "rating": 4,
+        "restaurant": { "$id": "restaurant-18" }
+      },
+      {
+        "$id": "review-37",
+        "content": "I liked it!",
+        "rating": 3.5,
+        "restaurant": { "$id": "restaurant-19" }
+      },
+      {
+        "$id": "review-38",
+        "content": "It was okay.",
+        "rating": 3.5,
+        "restaurant": { "$id": "restaurant-19" }
+      },
+      {
+        "$id": "review-39",
+        "content": "I liked it!",
+        "rating": 5,
+        "restaurant": { "$id": "restaurant-20" }
+      },
+      {
+        "$id": "review-40",
+        "content": "It was okay.",
+        "rating": 5,
+        "restaurant": { "$id": "restaurant-20" }
+      }
+    ]
+  },
+  "version": "0.0.95"
+}
