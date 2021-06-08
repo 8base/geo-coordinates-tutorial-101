@@ -1,4 +1,4 @@
-# Building a Map Interface Apps using a Geo JSON GraphQL API
+# Building Map Interface Apps using a Geo JSON GraphQL API
 
 Developing apps that rely on geo-coordinates to enable important features must go far beyond simply storing latitude and longitude data. Geo coordinate algorithms that calculate bounds and distances can be a fun brain challenge to implement, though more often than not they become time-consuming distractions from one's core project.
 
